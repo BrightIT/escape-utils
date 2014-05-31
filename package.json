@@ -1,5 +1,5 @@
 {
-  "name": "URL Encode",
+  "name": "url-encode",
   "main": "./lib/url-encode",
   "version": "0.0.0",
   "description": "URL encode or decode the selected text.",
