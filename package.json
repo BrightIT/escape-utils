@@ -1,14 +1,16 @@
 {
   "name": "url-encode",
   "main": "./lib/url-encode",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "URL encode or decode the selected text.",
-  "activationEvents": [ "url-encode:encode", "url-encode:decode" ],
+  "activationEvents": [
+    "url-encode:encode",
+    "url-encode:decode"
+  ],
   "repository": "https://github.com/mmattozzi/url-encode",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
