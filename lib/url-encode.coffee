@@ -6,13 +6,14 @@ module.exports =
   encode: ->
     # This assumes the active pane item is an editor
     editor = atom.workspace.activePaneItem
-    selection = editor.getSelection()
+    selections = editor.getSelections()
+
     selection.insertText(encodeURIComponent(selection.getText()),
-      { "select": true})
+      { "select": true}) for selection in selections
 
   decode: ->
     # This assumes the active pane item is an editor
     editor = atom.workspace.activePaneItem
-    selection = editor.getSelection()
+    selections = editor.getSelections()
     selection.insertText(decodeURIComponent(selection.getText()),
-      { "select": true})
+      { "select": true}) for selection in selections
