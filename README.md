@@ -1,3 +1,4 @@
-# url-encode package
+# Escape Utils atom package
 
-`cmd-u cmd-e` to URL encode selected text. `cmd-u cmd-d` to URL decode selected text.
+ - `shift-cmd-e shift-cmd-u` to URL encode selected text. 
+ - `shift-cmd-e cmd-u` to URL decode selected text.

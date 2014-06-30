@@ -1,7 +1,7 @@
 module.exports =
   activate: ->
-    atom.workspaceView.command "url-encode:encode", => @transfromSel encodeURIComponent
-    atom.workspaceView.command "url-encode:decode", => @transfromSel decodeURIComponent
+    atom.workspaceView.command "escape-utils:url-encode", => @transfromSel encodeURIComponent
+    atom.workspaceView.command "escape-utils:url-decode", => @transfromSel decodeURIComponent
 
 
   transfromSel: (t) ->

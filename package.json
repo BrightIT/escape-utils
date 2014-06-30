@@ -1,13 +1,13 @@
 {
-  "name": "url-encode",
-  "main": "./lib/url-encode",
+  "name": "escape-utils",
+  "main": "./lib/escape-utils",
   "version": "0.1.0",
-  "description": "URL encode or decode the selected text.",
+  "description": "(un)Escape strings using URL encoding, Base64, (planned: Base32, Base16, BinHex, Xml-Entitys, Html-Entites).",
   "activationEvents": [
-    "url-encode:encode",
-    "url-encode:decode"
+    "escape-utils:url-encode",
+    "escape-utils:url-decode"
   ],
-  "repository": "https://github.com/mmattozzi/url-encode",
+  "repository": "https://github.com/BrightIT/escape-utils",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"

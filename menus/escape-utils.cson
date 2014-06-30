@@ -1,0 +1,12 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'URL Encode'
+      'submenu': [
+        { 'label': 'Encode', 'command': 'escape-utils:url-encode' },
+        { 'label': 'Decode', 'command': 'escape-utils:url-decode' }
+      ]
+    ]
+  }
+]

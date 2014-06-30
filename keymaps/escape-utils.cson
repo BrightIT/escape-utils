@@ -8,5 +8,5 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 '.editor':
-  'cmd-u cmd-e': 'url-encode:encode'
-  'cmd-u cmd-d': 'url-encode:decode'
+  'shift-cmd-e shift-cmd-u': 'escape-utils:url-encode'
+  'shift-cmd-e cmd-u': 'escape-utils:url-decode'
