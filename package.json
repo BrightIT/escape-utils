@@ -5,7 +5,9 @@
   "description": "(un)Escape strings using URL encoding, Base64, (planned: Base32, Base16, BinHex, Xml-Entitys, Html-Entites).",
   "activationEvents": [
     "escape-utils:url-encode",
-    "escape-utils:url-decode"
+    "escape-utils:url-decode",
+    "escape-utils:base64-encode",
+    "escape-utils:base64-decode"
   ],
   "repository": "https://github.com/BrightIT/escape-utils",
   "license": "MIT",

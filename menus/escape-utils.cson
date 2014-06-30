@@ -2,10 +2,12 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'URL Encode'
+      'label': 'Escape Utils'
       'submenu': [
-        { 'label': 'Encode', 'command': 'escape-utils:url-encode' },
-        { 'label': 'Decode', 'command': 'escape-utils:url-decode' }
+        { 'label': 'Url Encode', 'command': 'escape-utils:url-encode' },
+        { 'label': 'Url Decode', 'command': 'escape-utils:url-decode' },
+        { 'label': 'Base64 Encode', 'command': 'escape-utils:base64-encode' },
+        { 'label': 'Base64 Decode', 'command': 'escape-utils:base64-decode' }
       ]
     ]
   }
