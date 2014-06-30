@@ -10,7 +10,7 @@
   "repository": "https://github.com/BrightIT/escape-utils",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">0.100.0"
   },
   "dependencies": {}
 }
