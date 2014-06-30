@@ -10,3 +10,5 @@
 '.editor':
   'shift-cmd-e shift-cmd-u': 'escape-utils:url-encode'
   'shift-cmd-e cmd-u': 'escape-utils:url-decode'
+  'shift-cmd-e shift-cmd-b': 'escape-utils:base64-encode'
+  'shift-cmd-e cmd-b': 'escape-utils:base64-decode'
