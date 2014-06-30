@@ -1,5 +1,5 @@
 {WorkspaceView} = require 'atom'
-UrlEncode = require '../lib/escape-utils'
+EscapeUtils = require '../lib/escape-utils'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -59,12 +59,18 @@ describe "EscapeUtils", ->
            toBe "textIHdpdGggYSBsb3Qgof spaces\nanother line"
 
   describe "escape-utils:base64-encode", ->
-    it "decodes just the selected text", ->
+    it "encodes just the selected text", ->
       editor.setText "text with a lot of spaces\nanother line"
       editor.setSelectedBufferRange([[0,4], [0,16]])
       trigger 'escape-utils:base64-encode', ->
          expect(editor.getText()).
            toBe "textIHdpdGggYSBsb3Qgof spaces\nanother line"
+    it "encodes wikipedia examples correctly", ->
+      expect(EscapeUtils.encodeBase64("pleasure.")).toBe("cGxlYXN1cmUu")
+      expect(EscapeUtils.encodeBase64("leasure.")).toBe("bGVhc3VyZS4=")
+      expect(EscapeUtils.encodeBase64("easure.")).toBe("ZWFzdXJlLg==")
+      expect(EscapeUtils.encodeBase64("asure.")).toBe("YXN1cmUu")
+      expect(EscapeUtils.encodeBase64("sure.")).toBe("c3VyZS4=")
 
   describe "escape-utils:base64-decode", ->
     it "decodes just the selected text", ->
