@@ -1,7 +1,7 @@
 {
   "name": "escape-utils",
   "main": "./lib/escape-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "(un)Escape strings using URL encoding, Base64, (planned: JS, Base32, Base16, BinHex, Xml-Entities, Html-Entities).",
   "activationEvents": [
     "escape-utils:url-encode",
