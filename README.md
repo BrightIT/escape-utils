@@ -1,5 +1,5 @@
 # Escape Utils atom package
-
+![Demo](https://raw.githubusercontent.com/BrightIT/escape-utils/master/demo.gif)
 This package that takes care of your encoding (escaping) needs: url, base64,
 and soon: json, js, sql, xml, html, sgml
 
