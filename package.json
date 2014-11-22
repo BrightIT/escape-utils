@@ -20,12 +20,16 @@
     "escape-utils:url-encode",
     "escape-utils:url-decode",
     "escape-utils:base64-encode",
-    "escape-utils:base64-decode"
+    "escape-utils:base64-decode",
+    "escape-utils:html-encode",
+    "escape-utils:html-decode"
   ],
   "repository": "https://github.com/BrightIT/escape-utils",
   "license": "MIT",
   "engines": {
     "atom": ">0.100.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "html-entities": "^1.1.1"
+  }
 }

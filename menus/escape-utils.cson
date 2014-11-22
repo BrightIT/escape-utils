@@ -8,6 +8,8 @@
         { 'label': 'Url Decode', 'command': 'escape-utils:url-decode' },
         { 'label': 'Base64 Encode', 'command': 'escape-utils:base64-encode' },
         { 'label': 'Base64 Decode', 'command': 'escape-utils:base64-decode' }
+        { 'label': 'HTML Encode', 'command': 'escape-utils:html-encode' },
+        { 'label': 'HTML Decode', 'command': 'escape-utils:html-decode' }
       ]
     ]
   }

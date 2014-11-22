@@ -100,3 +100,19 @@ describe "EscapeUtils", ->
       trigger 'escape-utils:base64-decode', ->
          expect(editor.getText()).
            toBe "text with a lot of spaces\nanother line"
+
+  describe "escape-utils:html-encode", ->
+    it "encodes just the selected text", ->
+      editor.setText "<p class=\"umlauts\">Motörhead</p>"
+      editor.setSelectedBufferRange([[0,0], [0,20]])
+      trigger 'escape-utils:html-encode', ->
+         expect(editor.getText()).
+           toBe "&lt;p class=&quot;umlauts&quot;&gt;Motörhead</p>"
+
+  describe "escape-utils:html-decode", ->
+    it "decodes just the selected text", ->
+      editor.setText "&lt;p class=&quot;umlauts&quot;&gt;Motörhead&lt;/p&gt;"
+      editor.setSelectedBufferRange([[0,0], [0,32]])
+      trigger 'escape-utils:html-decode', ->
+         expect(editor.getText()).
+           toBe "<p class=\"umlauts\"&gt;Motörhead&lt;/p&gt;"
