@@ -104,10 +104,17 @@ describe "EscapeUtils", ->
   describe "escape-utils:html-encode", ->
     it "encodes just the selected text", ->
       editor.setText "<p class=\"umlauts\">Motörhead</p>"
-      editor.setSelectedBufferRange([[0,0], [0,20]])
+      editor.setSelectedBufferRange([[0,0], [0,27]])
       trigger 'escape-utils:html-encode', ->
          expect(editor.getText()).
-           toBe "&lt;p class=&quot;umlauts&quot;&gt;Motörhead</p>"
+           toBe "&lt;p class=&quot;umlauts&quot;&gt;Mot&ouml;rhead</p>"
+
+    it "encodes and maintains new lines", ->
+      editor.setText "<p>\n  Motörhead\n</p>"
+      editor.setSelectedBufferRange([[0,0], [2,4]])
+      trigger 'escape-utils:html-encode-maintain-lines', ->
+         expect(editor.getText()).
+           toBe "&lt;p&gt;\n  Mot&ouml;rhead\n&lt;/p&gt;"
 
   describe "escape-utils:html-decode", ->
     it "decodes just the selected text", ->

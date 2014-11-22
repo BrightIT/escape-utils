@@ -22,6 +22,7 @@
     "escape-utils:base64-encode",
     "escape-utils:base64-decode",
     "escape-utils:html-encode",
+    "escape-utils:html-encode-maintain-lines",
     "escape-utils:html-decode"
   ],
   "repository": "https://github.com/BrightIT/escape-utils",

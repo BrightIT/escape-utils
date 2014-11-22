@@ -9,6 +9,7 @@
         { 'label': 'Base64 Encode', 'command': 'escape-utils:base64-encode' },
         { 'label': 'Base64 Decode', 'command': 'escape-utils:base64-decode' }
         { 'label': 'HTML Encode', 'command': 'escape-utils:html-encode' },
+        { 'label': 'HTML Encode and keep new lines', 'command': 'escape-utils:html-encode-maintain-lines' },
         { 'label': 'HTML Decode', 'command': 'escape-utils:html-decode' }
       ]
     ]

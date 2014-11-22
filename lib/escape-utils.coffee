@@ -7,8 +7,9 @@ module.exports =
     atom.workspaceView.command "escape-utils:url-decode", => @transfromSel decodeURIComponent
     atom.workspaceView.command "escape-utils:base64-encode", => @transfromSel @encodeBase64
     atom.workspaceView.command "escape-utils:base64-decode", => @transfromSel @decodeBase64
-    atom.workspaceView.command "escape-utils:html-encode", => @transfromSel entities.encodeNonUTF.bind(entities)
-    atom.workspaceView.command "escape-utils:html-decode", => @transfromSel entities.decode.bind(entities)
+    atom.workspaceView.command "escape-utils:html-encode", => @transfromSel entities.encodeNonUTF
+    atom.workspaceView.command "escape-utils:html-encode-maintain-lines", => @transfromSel @encodeHtmlMaintainingLines
+    atom.workspaceView.command "escape-utils:html-decode", => @transfromSel entities.decode
 
 
   transfromSel: (t) ->
@@ -28,3 +29,6 @@ module.exports =
     else
       #console.debug("Ignoring text as it contains illegal characers", text)
       text
+
+  encodeHtmlMaintainingLines: (text) ->
+    entities.encodeNonUTF(text).replace(/&NewLine;/g, '\n')
