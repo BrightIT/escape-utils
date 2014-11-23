@@ -13,9 +13,10 @@
     "Encoding",
     "Encode",
     "escape",
-    "url"
+    "url",
+    "html"
   ],
-  "description": "(un)Escape strings using URL encoding, Base64, (planned: JS, Base32, Base16, BinHex, Xml-Entities, Html-Entities).",
+  "description": "Encode/decode URLs, Base65 or escape Html entites (future: JS/JSON, Base32/Base16, BinHex, Xml-Entities).",
   "activationEvents": [
     "escape-utils:url-encode",
     "escape-utils:url-decode",
