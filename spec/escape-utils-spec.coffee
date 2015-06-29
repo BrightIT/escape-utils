@@ -1,4 +1,3 @@
-{WorkspaceView} = require 'atom'
 EscapeUtils = require '../lib/escape-utils'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -10,25 +9,25 @@ describe "EscapeUtils", ->
   [activationPromise, editor] = []
 
   beforeEach ->
-    atom.workspaceView = new WorkspaceView
+    atom.workspaceView = atom.views.getView(atom.workspace)
 
     waitsForPromise ->
-      atom.workspaceView.open().then (ed) ->
+      atom.workspace.open().then (ed) ->
         editor = ed
 
     activationPromise = atom.packages.activatePackage("escape-utils")
 
   trigger = (t, cb) ->
-    atom.workspaceView.trigger t
+    atom.commands.dispatch atom.workspaceView, t
     waitsForPromise -> activationPromise
     runs ->
       cb()
 
   describe "escape-utils:url-encode", ->
     it "still works even if the editor is not set", ->
-      atom.workspaceView.destroyActivePaneItem()
+      atom.workspace.destroyActivePaneItem()
       trigger 'escape-utils:url-encode', ->
-        expect(atom.workspaceView.getActiveView()).not.toBeDefined()
+        expect(atom.views.getView(atom.workspace.getActiveTextEditor())).not.toBeDefined()
 
     it "does nothing when nothing is selected", ->
       editor.setText "text with spaces\nanother line with special chars%=!+"
