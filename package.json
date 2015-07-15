@@ -3,18 +3,19 @@
   "main": "./lib/escape-utils",
   "version": "0.5.0",
   "keywords": [
+    "base64",
+    "URL",
+    "uri",
+    "html",
+    "Encode",
+    "escape",
+    "decode",
+    "Encoding",
     "url encoding",
     "url encode",
     "url-encode",
     "url-decode",
-    "url decode",
-    "Base64",
-    "json",
-    "Encoding",
-    "Encode",
-    "escape",
-    "url",
-    "html"
+    "url decode"
   ],
   "description": "Encode/decode URLs, Base65 or escape Html entites (future: JS/JSON, Base32/Base16, BinHex, Xml-Entities).",
   "activationCommands": {
