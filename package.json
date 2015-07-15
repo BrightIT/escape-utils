@@ -1,7 +1,7 @@
 {
   "name": "escape-utils",
   "main": "./lib/escape-utils",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "keywords": [
     "base64",
     "URL",
@@ -20,13 +20,13 @@
   "description": "Encode/decode URLs, Base65 or escape Html entites (future: JS/JSON, Base32/Base16, BinHex, Xml-Entities).",
   "activationCommands": {
     "atom-workspace": [
-        "escape-utils:url-encode",
-        "escape-utils:url-decode",
-        "escape-utils:base64-encode",
-        "escape-utils:base64-decode",
-        "escape-utils:html-encode",
-        "escape-utils:html-encode-maintain-lines",
-        "escape-utils:html-decode"
+      "escape-utils:url-encode",
+      "escape-utils:url-decode",
+      "escape-utils:base64-encode",
+      "escape-utils:base64-decode",
+      "escape-utils:html-encode",
+      "escape-utils:html-encode-maintain-lines",
+      "escape-utils:html-decode"
     ]
   },
   "repository": {
