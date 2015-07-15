@@ -17,16 +17,21 @@
     "html"
   ],
   "description": "Encode/decode URLs, Base65 or escape Html entites (future: JS/JSON, Base32/Base16, BinHex, Xml-Entities).",
-  "activationEvents": [
-    "escape-utils:url-encode",
-    "escape-utils:url-decode",
-    "escape-utils:base64-encode",
-    "escape-utils:base64-decode",
-    "escape-utils:html-encode",
-    "escape-utils:html-encode-maintain-lines",
-    "escape-utils:html-decode"
-  ],
-  "repository": "https://github.com/BrightIT/escape-utils",
+  "activationCommands": {
+    "atom-workspace": [
+        "escape-utils:url-encode",
+        "escape-utils:url-decode",
+        "escape-utils:base64-encode",
+        "escape-utils:base64-decode",
+        "escape-utils:html-encode",
+        "escape-utils:html-encode-maintain-lines",
+        "escape-utils:html-decode"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrightIT/escape-utils"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">0.100.0"

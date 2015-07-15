@@ -3,19 +3,18 @@ entities = new Entities()
 
 module.exports =
   activate: ->
-    atom.workspaceView.command "escape-utils:url-encode", => @transfromSel encodeURIComponent
-    atom.workspaceView.command "escape-utils:url-decode", => @transfromSel decodeURIComponent
-    atom.workspaceView.command "escape-utils:base64-encode", => @transfromSel @encodeBase64
-    atom.workspaceView.command "escape-utils:base64-decode", => @transfromSel @decodeBase64
-    atom.workspaceView.command "escape-utils:html-encode", => @transfromSel entities.encodeNonUTF
-    atom.workspaceView.command "escape-utils:html-encode-maintain-lines", => @transfromSel @encodeHtmlMaintainingLines
-    atom.workspaceView.command "escape-utils:html-decode", => @transfromSel entities.decode
+    atom.commands.add "atom-workspace", "escape-utils:url-encode": => @transfromSel encodeURIComponent
+    atom.commands.add "atom-workspace", "escape-utils:url-decode": => @transfromSel decodeURIComponent
+    atom.commands.add "atom-workspace", "escape-utils:base64-encode": => @transfromSel @encodeBase64
+    atom.commands.add "atom-workspace", "escape-utils:base64-decode": => @transfromSel @decodeBase64
+    atom.commands.add "atom-workspace", "escape-utils:html-encode": => @transfromSel entities.encodeNonUTF
+    atom.commands.add "atom-workspace", "escape-utils:html-encode-maintain-lines": => @transfromSel @encodeHtmlMaintainingLines
+    atom.commands.add "atom-workspace", "escape-utils:html-decode": => @transfromSel entities.decode
 
 
   transfromSel: (t) ->
     # This assumes the active pane item is an editor
-    editorView = atom.workspaceView.getActiveView()
-    editor = editorView?.getEditor()
+    editor = atom.workspace.getActiveTextEditor()
     if (editor?)
       selections = editor.getSelections()
       sel.insertText(t(sel.getText()), { "select": true}) for sel in selections
