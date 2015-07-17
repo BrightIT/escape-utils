@@ -17,7 +17,7 @@
     "url-decode",
     "url decode"
   ],
-  "description": "Encode/decode URLs, Base65 or escape Html entites (future: JS/JSON, Base32/Base16, BinHex, Xml-Entities).",
+  "description": "Encode/decode URLs, Base64 or escape HTML entites.",
   "activationCommands": {
     "atom-workspace": [
       "escape-utils:url-encode",
