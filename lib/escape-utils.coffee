@@ -17,7 +17,7 @@ module.exports =
     editor = atom.workspace.getActiveTextEditor()
     if (editor?)
       selections = editor.getSelections()
-      sel.insertText(t(sel.getText()), { "select": true}) for sel in selections
+      sel.insertText(t(sel.getText()), { "select": true, "normalizeLineEndings": true }) for sel in selections
 
   encodeBase64: (text) ->
     new Buffer(text).toString("base64")
@@ -30,4 +30,4 @@ module.exports =
       text
 
   encodeHtmlMaintainingLines: (text) ->
-    entities.encodeNonUTF(text).replace(/&NewLine;/g, '\n')
+    text.split(/[\n\r]{1,2}/).map(entities.encodeNonUTF).join('\n')
